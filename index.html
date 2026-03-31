@@ -3,56 +3,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Under Construction</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #111827, #1f2937);
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #d1d5db;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 16px;
-            border: 1px solid #4b5563;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            color: #9ca3af;
-        }
-    </style>
+    <link rel="shortcut icon" href="./assets/LUMOconnect-logo.png" type="image/x-icon">
+    <title>Connect.Lumo</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="module" src="./javascript/app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="badge">Coming Soon</div>
-        <h1>This page is being built</h1>
-        <p>We are currently working on this page. Please check back later.</p>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Controls</a></li>
+            <li><a href="#">Guide</a></li>
+        </ul>
+        <a href="#">
+            <img src="./assets/LUMOconnect-logo.png" alt="Logo of Lumo connect">
+        </a>
+        <ul>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+    <main>        
+        <div class="notification-container" id="notificationContainer"></div>
+        <div class="container" id="container">
+            <button id="connect">Connect Lumo</button>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li class="logo-container"><img src="./assets/LUMOconnect-logo.png" alt="LUMO Connect"> LUMO Connect</li>
+                <li>© Copyright 2025 - 2026</li>
+            </ul>
+            <ul>
+                <li><a href="#">Controls</a></li>
+                <li><a href="#">Guide</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="row">
+                <li><a href="https://lumo.hogeschool-rotterdam.com/">LUMO</a></li> |
+                <li><a href="http://connect-lumo.hogeschool-rotterdam.com/">LUMO Connect</a></li> |
+                <li>Team 12 - CLE3</li>
+            </ul>
+            <ul class="row">
+                <li><a href="#">Privacy</a> |</li>
+                <li><a href="#">General terms and conditions</a> |</li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

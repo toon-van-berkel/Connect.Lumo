@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 10svh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 191, 0, 0.1254901961);
+}
+nav > ul {
+  gap: 20px;
+  display: flex;
+  list-style: none;
+}
+nav > ul:first-of-type {
+  justify-content: flex-start;
+}
+nav > ul:last-of-type {
+  justify-content: flex-end;
+}
+nav > ul > li > a {
+  text-decoration: none;
+}
+nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+nav > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav > a > img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+main {
+  position: relative;
+  min-height: 80svh;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading {
+  margin-bottom: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+a {
+  color: #00bf00;
+}
+
+.badge {
+  display: inline-block;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #4b5563;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+button {
+  background-color: #00bf00;
+  display: inline-block;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #4b5563;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #1f2937;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: transparent;
+  border-color: #00bf00;
+  color: #00bf00;
+  cursor: pointer;
+}
+
+.notification-container {
+  gap: 20px;
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.notification-container > div {
+  display: flex;
+  gap: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: 4px 4px 13px 4px rgba(44, 44, 44, 0.16);
+}
+.notification-container > div.succes {
+  border: 1px solid #345f2a;
+  background-color: rgba(0, 191, 0, 0.3333333333);
+  color: #9ca3af;
+}
+.notification-container > div.normal {
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+}
+.notification-container > div.warning {
+  border: 1px solid #663838;
+  background-color: rgba(191, 0, 0, 0.3333333333);
+  color: #9ca3af;
+}
+.notification-container > div > img {
+  width: 15px;
+  height: 15px;
+}
+
+footer {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 10svh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(0, 191, 0, 0.1254901961);
+}
+footer > div {
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+footer > div > ul, footer > div > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+footer > div > ul.row, footer > div > div.row {
+  flex-direction: row;
+  gap: 20px;
+}
+footer > div > ul {
+  list-style: none;
+}
+footer > div > ul:first-child {
+  align-items: flex-start;
+}
+footer > div > ul:first-child li {
+  margin-bottom: 10px;
+}
+footer > div > ul:last-child {
+  align-items: flex-end;
+}
+footer > div > ul:last-child li {
+  margin-bottom: 10px;
+}
+footer > div > ul.row:first-child {
+  justify-content: flex-start;
+}
+footer > div > ul.row:last-child {
+  justify-content: flex-end;
+}
+footer > div > div:first-child {
+  align-items: flex-start;
+}
+footer > div > div:first-child li {
+  margin-bottom: 10px;
+}
+footer > div > div:last-child {
+  align-items: flex-end;
+}
+footer > div > div:last-child li {
+  margin-bottom: 10px;
+}
+footer > div > div.row:first-child {
+  justify-content: flex-start;
+}
+footer > div > div.row:last-child {
+  justify-content: flex-end;
+}
+
+.logo-container {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+}
+.logo-container > img {
+  width: 80px;
+}/*# sourceMappingURL=style.css.map */

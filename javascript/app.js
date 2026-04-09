@@ -1,11 +1,20 @@
-import {Connect} from './connect.js';
-import {addNotification} from './notification.js';
+import { setPreferredLanguage, setPreferredTheme } from './preferences.js';
+import { generateContent } from './generateContent.js';
+import { connect } from './connect.js';
+
+let connectButton = document.querySelector('#connect');
+
+// ============================================================================
+// ============================================================================
+// =============================== Load content ===============================
+// ============================================================================
+// ============================================================================
+// Load on mount
+setPreferredLanguage();
+setPreferredTheme();
+generateContent();
 
 // Make a button to be able to manually connect
-let connectButton = document.querySelector('#connect');
 connectButton.addEventListener('click', function() {
-    Connect();
+    connect();
 });
-
-// Add a notification about automatically trying to connect
-addNotification('countingInformation', 'Automatically trying to connect in', 60, Connect);

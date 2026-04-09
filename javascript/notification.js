@@ -31,9 +31,9 @@ function addCloseButton(notification, extraAction = null) {
 
 // Make global add notification function for this aplication
 export function addNotification(type, message, count = null, callback = null) {
-    const validTypes = ['Succes', 'Information', 'Warning', 'countingSucces', 'countingWarning', 'countingInformation'];
+    const validTypes = ['succes', 'information', 'warning', 'countingsucces', 'countingwarning', 'countinginformation'];
 
-    if (!validTypes.includes(type)) {
+    if (!validTypes.includes(type.toLowerCase())) {
         const notification = document.createElement('div');
         notification.className = 'warning';
 

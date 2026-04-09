@@ -1,5 +1,6 @@
 import { isDevModeEnabled } from './helpers.js';
-import { generateContent, generateConnectingComponent } from './generateContent.js';
+import { generateContent } from './generateContent.js';
+import { addNotification } from './notification.js';
 
 export let preferredLanguage = '';
 export let preferredTheme = '';
@@ -8,6 +9,7 @@ const languageSelector = document.getElementById("languageSelector");
 
 languageSelector.addEventListener("change", (event) => {
     preferredLanguage = event.target.value;
+    addNotification('information', `Changed language to ${event.target.value}`);
     generateContent();
     isDevModeEnabled(true, `INFO: Changed language to '${event.target.value}'.`);
 });

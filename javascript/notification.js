@@ -1,47 +1,85 @@
+// ============================================================================
+// ============================================================================
+// ========================= Code for notifications ===========================
+// ============================================================================
+// ============================================================================
+// This code makes it so that notifications are visible and animated.
+
+// Get the notification element by its id
 let notificationContainerElement = document.querySelector('#notificationContainer')
 
+// Create the element for the closing icon
+let closeIcon = `
+    <svg stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="10" y1="0" x2="0" y2="10"></line>
+        <line x1="0" y1="0" x2="10" y2="10"></line>
+    </svg>
+`;
+
+function addCloseButton(notification, extraAction = null) {
+    const button = notification.querySelector('button');
+
+    if (button) {
+        button.addEventListener('click', () => {
+            if (typeof extraAction === 'function') {
+                extraAction();
+            }
+            notification.remove();
+        });
+    }
+}
+
+// Make global add notification function for this aplication
 export function addNotification(type, message, count = null, callback = null) {
-    const validTypes = ['Succes', 'Information', 'Warning', 'countingWarning', 'countingInformation'];
+    const validTypes = ['Succes', 'Information', 'Warning', 'countingSucces', 'countingWarning', 'countingInformation'];
 
     if (!validTypes.includes(type)) {
         const notification = document.createElement('div');
         notification.className = 'warning';
+
         notification.innerHTML = `
             <img src="./assets/WarningIcon.png" alt="Notification icon">
-            This notification was not set properly.
+            <div>
+                <span>Warning</span>
+                <span>This notification was not set properly.</span>
+            </div>
+            <button type="button">${closeIcon}</button>
         `;
+
         notificationContainerElement.appendChild(notification);
+        addCloseButton(notification);
 
         setTimeout(() => {
             notification.remove();
-        }, 5000);
+        }, 3000);
 
         return notification;
     }
 
-    if (type === 'countingSucces' || type === 'countingInformation' ||type === 'countingWarning') {
+    if (type === 'countingSucces' || type === 'countingInformation' || type === 'countingWarning') {
         const notification = document.createElement('div');
-        
+        let interval;
+
         if (type === 'countingSucces') {
             notification.className = 'succes';
-
             notification.innerHTML = `
                 <img src="./assets/SuccesIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
+                <button type="button">${closeIcon}</button>
             `;
         } else if (type === 'countingInformation') {
             notification.className = 'normal';
-
             notification.innerHTML = `
                 <img src="./assets/InformationIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
+                <button type="button">${closeIcon}</button>
             `;
         } else if (type === 'countingWarning') {
             notification.className = 'warning';
-
             notification.innerHTML = `
                 <img src="./assets/WarningIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
+                <button type="button">${closeIcon}</button>
             `;
         }
 
@@ -50,7 +88,7 @@ export function addNotification(type, message, count = null, callback = null) {
         const countElement = notification.querySelector('.count');
         let currentCount = Number(count);
 
-        const interval = setInterval(() => {
+        interval = setInterval(() => {
             currentCount--;
             countElement.textContent = currentCount;
 
@@ -64,6 +102,8 @@ export function addNotification(type, message, count = null, callback = null) {
             }
         }, 1000);
 
+        addCloseButton(notification, () => clearInterval(interval));
+
         return notification;
     }
 
@@ -71,10 +111,12 @@ export function addNotification(type, message, count = null, callback = null) {
     notification.className = type.toLowerCase();
     notification.innerHTML = `
         <img src="./assets/${type}Icon.png" alt="Notification icon">
-        ${message}
+        <span>${message}</span>
+        <button type="button">${closeIcon}</button>
     `;
 
     notificationContainerElement.appendChild(notification);
+    addCloseButton(notification);
 
     setTimeout(() => {
         notification.remove();

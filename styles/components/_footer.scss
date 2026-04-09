@@ -1,0 +1,70 @@
+// ============================================================================
+// ============================================================================
+// ====================== Base styling for the footer =========================
+// ============================================================================
+// ============================================================================
+footer {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 10svh;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-top: 1px solid #00bf0020;
+
+    & > div {
+        width: 100%;
+        gap: 20px;
+        margin-bottom: 20px;
+        display: flex;
+
+        & > ul, 
+        & > div {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            &.row {
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+        & > ul {
+            list-style: none;
+
+            &:first-child {
+                align-items: flex-start;
+                & li {margin-bottom: 10px;}
+            }
+            &:last-child {
+                align-items: flex-end;
+                & li {margin-bottom: 10px;}
+            }
+            &.row:first-child {
+                justify-content: flex-start;
+            }
+            &.row:last-child {
+                justify-content: flex-end;
+            }
+        }
+        & > div {
+            &:first-child {
+                align-items: flex-start;
+                & li {margin-bottom: 10px;}
+            }
+            &:last-child {
+                align-items: flex-end;
+                & li {margin-bottom: 10px;}
+            }
+            &.row:first-child {
+                justify-content: flex-start;
+            }
+            &.row:last-child {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

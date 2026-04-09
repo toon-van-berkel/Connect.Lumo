@@ -1,10 +1,11 @@
 import { addNotification } from './notification.js';
+import { generateConnectingComponent } from './generateContent.js';
 
 let notificationContainerElement = document.querySelector('#notificationContainer');
 let containerElement = document.querySelector('#container');
 
 let hasReloaded = false;
-let isLoading = false;
+export let isLoading = false;
 
 let dots = '';
 
@@ -13,16 +14,8 @@ let connectTimeout;
 let clearContainerTimeout;
 let loadingDotsElement;
 
-// Content for loading 
-const loadingContent = `
-    <img src="./assets/Loading.gif" alt="Loading animation" class="loading">
-    <h1>Connecting Lumo<span id="load"></span></h1>
-    <p>We are connecting your Lumo, this might take a while. If it won't connect in 5 minutes <a href="#">make a ticket</a>.</p>
-    <div class="badge">We are trying to connect you to our services.</div>
-`;
-
 function loadLoadingContent() {
-    containerElement.innerHTML = loadingContent;
+    generateConnectingComponent();
     loadingDotsElement = document.querySelector('#load');
 }
 
@@ -68,7 +61,7 @@ function startConnecting() {
     }, 5000);
 }
 
-export function Connect() {
+export function connect() {
     clearInterval(loadingInterval);
     clearTimeout(connectTimeout);
     clearTimeout(clearContainerTimeout);

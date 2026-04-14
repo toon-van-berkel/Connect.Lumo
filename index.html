@@ -6,53 +6,26 @@
     <link rel="shortcut icon" href="./assets/LUMOconnect-logo.png" type="image/x-icon">
     <title>Connect.Lumo</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <script type="module" src="./javascript/app.js"></script>
+    <script defer type="module" src="./javascript/app.js"></script>
 </head>
 <body>
-    <nav>
+    <div class="top-bar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Controls</a></li>
-            <li><a href="#">Guide</a></li>
+            <li>
+                <select name="Language selector" id="languageSelector">
+                    <option value="en-gb">en-gb</option>
+                    <option value="nl-nl">nl-nl</option>
+                </select>
+            </li>
         </ul>
-        <a href="#">
-            <img src="./assets/LUMOconnect-logo.png" alt="Logo of Lumo connect">
-        </a>
-        <ul>
-            <li><a href="#">Support</a></li>
-        </ul>
-    </nav>
-    <main>        
+    </div>
+    <nav id="nav"></nav>
+    <main>
         <div class="notification-container" id="notificationContainer"></div>
         <section class="container" id="container">
-            <button id="connect">Connect Lumo</button>
+            <button id="connect"></button>
         </section>
     </main>
-    <footer>
-        <div>
-            <ul>
-                <li class="logo-container"><img src="./assets/LUMOconnect-logo.png" alt="LUMO Connect"> LUMO Connect</li>
-                <li>© Copyright 2026 - 2029</li>
-            </ul>
-            <ul>
-                <li><a href="#">Controls</a></li>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="row">
-                <li><a href="https://lumo.hogeschool-rotterdam.com/">LUMO</a></li> |
-                <li><a href="http://connect-lumo.hogeschool-rotterdam.com/">LUMO Connect</a></li> |
-                <li>Team 12 - CLE3</li>
-            </ul>
-            <ul class="row">
-                <li><a href="#">Privacy</a> |</li>
-                <li><a href="#">General terms and conditions</a> |</li>
-                <li><a href="#">Cookies</a></li>
-            </ul>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 </html>

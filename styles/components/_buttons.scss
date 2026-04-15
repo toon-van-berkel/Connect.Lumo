@@ -1,3 +1,5 @@
+@use '../variables';
+
 button {
     background-color: #00bf00;
     display: inline-block;
@@ -8,7 +10,8 @@ button {
     border-radius: 999px;
     font-size: 0.9rem;
     color: #1f2937;
-    font-weight: bold;
+  font-family: variables.$font-title;
+  font-weight: 700;
 }
 
 button:hover {

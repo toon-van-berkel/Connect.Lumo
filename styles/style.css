@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 button {
   background-color: #00bf00;
   display: inline-block;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20px;
   padding: 8px 16px;
@@ -9,7 +9,8 @@ button {
   border-radius: 999px;
   font-size: 0.9rem;
   color: #1f2937;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 button:hover {
@@ -22,12 +23,12 @@ button:hover {
 footer {
   width: 100%;
   max-width: 1200px;
-  min-height: 10svh;
-  padding: 20px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 1px solid rgba(0, 191, 0, 0.1254901961);
+  border-top: 1px solid rgba(0, 191, 0, 0.33);
+  margin-top: auto;
 }
 footer > div {
   width: 100%;
@@ -35,29 +36,24 @@ footer > div {
   margin-bottom: 20px;
   display: flex;
 }
-footer > div > ul, footer > div > div {
+footer > div > ul,
+footer > div > div {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
-footer > div > ul.row, footer > div > div.row {
+footer > div > ul.row,
+footer > div > div.row {
   flex-direction: row;
   gap: 20px;
 }
-footer > div > ul {
-  list-style: none;
-}
-footer > div > ul:first-child {
+footer > div > ul:first-child,
+footer > div > div:first-child {
   align-items: flex-start;
 }
-footer > div > ul:first-child li {
-  margin-bottom: 10px;
-}
-footer > div > ul:last-child {
+footer > div > ul:last-child,
+footer > div > div:last-child {
   align-items: flex-end;
-}
-footer > div > ul:last-child li {
-  margin-bottom: 10px;
 }
 footer > div > ul.row:first-child {
   justify-content: flex-start;
@@ -65,30 +61,29 @@ footer > div > ul.row:first-child {
 footer > div > ul.row:last-child {
   justify-content: flex-end;
 }
-footer > div > div:first-child {
-  align-items: flex-start;
-}
-footer > div > div:first-child li {
+footer li {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #9ca3af;
   margin-bottom: 10px;
 }
-footer > div > div:last-child {
-  align-items: flex-end;
+footer a {
+  color: #00bf00 !important;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
 }
-footer > div > div:last-child li {
-  margin-bottom: 10px;
-}
-footer > div > div.row:first-child {
-  justify-content: flex-start;
-}
-footer > div > div.row:last-child {
-  justify-content: flex-end;
+footer a:hover {
+  opacity: 0.6;
+  text-decoration: underline;
 }
 
 .top-bar {
   width: 100%;
   max-width: 1200px;
   padding: 5px 20px;
-  background-color: rgba(0, 191, 0, 0.1882352941);
+  background-color: rgba(0, 191, 0, 0.33);
   border-radius: 0 0 8px 8px;
 }
 .top-bar > ul {
@@ -98,8 +93,10 @@ footer > div > div.row:last-child {
 }
 .top-bar > ul > li > select {
   padding: 5px 10px;
-  background-color: #151d2c;
-  color: #FFFFFF;
+  background-color: #1f2937;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+  font-family: "Inter", sans-serif;
 }
 
 nav {
@@ -110,35 +107,43 @@ nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 191, 0, 0.1254901961);
+  border-bottom: 1px solid rgba(0, 191, 0, 0.33);
+  font-family: "Montserrat", sans-serif;
 }
-nav > ul {
-  gap: 20px;
+nav ul {
   display: flex;
   align-items: center;
+  gap: 20px;
   list-style: none;
 }
-nav > ul:first-of-type {
+nav ul:first-of-type {
   justify-content: flex-start;
 }
-nav > ul:last-of-type {
+nav ul:last-of-type {
   justify-content: flex-end;
 }
-nav > ul > li > button {
+nav ul li button {
   margin-top: 0;
 }
-nav > ul > li > a {
+nav ul li a {
   text-decoration: none;
+  color: #00bf00;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.3s;
 }
-nav > ul > li > a:hover {
+nav ul li a:hover {
+  opacity: 0.7;
   text-decoration: underline;
 }
 nav > a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
-nav > a > img {
+nav > a img {
   height: 40px;
   width: auto;
   display: block;
@@ -153,7 +158,6 @@ nav > a > img {
   flex-direction: column;
 }
 .notification-container > div {
-  width: -moz-max-content;
   width: max-content;
   padding: 8px 16px;
   display: flex;
@@ -235,6 +239,10 @@ main {
   flex-direction: column;
 }
 
+.container h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
 .loading {
   margin-bottom: 50px;
   width: 100px;
@@ -257,7 +265,6 @@ a {
 
 .badge {
   display: inline-block;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20px;
   padding: 8px 16px;
@@ -284,4 +291,6 @@ a {
 [data-theme=light] {
   background: white;
   color: black;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -8,16 +8,18 @@
 @use './components/nav';
 @use './components/notification';
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
 // ============================================================================
 // ============================================================================
 // ============================== Base styling ================================
 // ============================================================================
 // ============================================================================
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 // ============================================================================
@@ -26,24 +28,25 @@
 // ============================================================================
 // ============================================================================
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(135deg, #111827, #1f2937);
-    color: white;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  text-align: center;
 }
+
 main {
-    position: relative;
-    min-height: 80svh;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  position: relative;
+  min-height: 80svh;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 // ============================================================================
@@ -52,16 +55,21 @@ main {
 // ============================================================================
 // ============================================================================
 .container {
-    max-width: 600px;
+  max-width: 600px;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+.container h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
 .loading {
-    margin-bottom: 50px;
-    width: 100px;
-    height: 100px;
+  margin-bottom: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 // ============================================================================
@@ -70,15 +78,17 @@ main {
 // ============================================================================
 // ============================================================================
 h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
+
 p {
-    font-size: 1.2rem;
-    color: #d1d5db;
+  font-size: 1.2rem;
+  color: #d1d5db;
 }
+
 a {
-    color: #00bf00;
+  color: #00bf00;
 }
 
 // ============================================================================
@@ -87,14 +97,14 @@ a {
 // ============================================================================
 // ============================================================================
 .badge {
-    display: inline-block;
-    width: max-content;
-    margin-top: 20px;
-    padding: 8px 16px;
-    border: 1px solid #4b5563;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    color: #9ca3af;
+  display: inline-block;
+  width: max-content;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #4b5563;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #9ca3af;
 }
 
 // ============================================================================
@@ -103,13 +113,13 @@ a {
 // ============================================================================
 // ============================================================================
 .logo-container {
-    gap: 30px;
-    display: flex;
-    align-items: center;
+  gap: 30px;
+  display: flex;
+  align-items: center;
 
-    & > img {
-        width: 80px;
-    }
+  & > img {
+    width: 80px;
+  }
 }
 
 [data-theme="dark"] {

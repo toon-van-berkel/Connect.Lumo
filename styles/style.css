@@ -186,7 +186,7 @@ nav > a > img {
 .notification-container > div > button:hover {
   border: #345f2a 1px solid;
 }
-.notification-container > div.succes {
+.notification-container > div.success {
   border: 1px solid #345f2a;
   color: #9ca3af;
 }

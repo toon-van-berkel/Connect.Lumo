@@ -552,5 +552,84 @@ export let content = {
             'connectC':        'Tengist',
             'preferencesA':    'Tungumáli breytt í',
         }
+    },
+    // ============================================================================
+    // ============================================================================
+    // ============================= Bahasa Malaysia ==============================
+    // ============================================================================
+    // ============================================================================
+    'ms-my': {
+        'nav': {
+            'link1':            'Laman Utama',
+            'link2':            'Kawalan',
+            'link3':            'Panduan',
+            'imgAlt':           'Logo Lumo Connect',
+            'link4':            'Sokongan',
+            'link5':            'Log Masuk'
+        },
+        'footer': {
+            'imgAlt':           'Logo Lumo Connect',
+            'link1':            'Kawalan',
+            'link2':            'Panduan',
+            'link3':            'Hubungi',
+            'link4':            'Sokongan',
+            'link5':            'Privasi',
+            'link6':            'Terma dan syarat umum',
+            'link7':            'Cookies'
+        },
+        'connect': {
+            'connectButton':    'Sambungkan Lumo',
+        },
+        'connectingComponent': {
+            'gifAlt':           'Animasi memuatkan',
+            'title':            'Menyambungkan Lumo',
+            'message':          'Kami sedang menyambungkan Lumo anda. Ini mungkin mengambil sedikit masa. Jika ia masih tidak berfungsi selepas 5 minit, ',
+            'link':             'buat tiket',
+            'badge':            'Kami sedang cuba menyambungkan anda kepada perkhidmatan kami.'
+        },
+        'notifications': {
+            'connectA':        'Tidak dapat menyambung, cuba lagi dalam',
+            'connectB':        'Muat semula berjaya',
+            'connectC':        'Menyambung',
+            'preferencesA':    'Bahasa ditukar kepada',
+        }
+    },
+
+    // Bahasa Malaysia for deaf people
+    'ms-my-na': {
+        'nav': {
+            'link1':            'Laman Utama',
+            'link2':            'Butang',
+            'link3':            'Penerangan',
+            'imgAlt':           'Logo Lumo Connect',
+            'link4':            'Bantuan',
+            'link5':            'Log Masuk'
+        },
+        'footer': {
+            'imgAlt':           'Logo Lumo Connect',
+            'link1':            'Butang',
+            'link2':            'Penerangan',
+            'link3':            'Hubungi',
+            'link4':            'Bantuan',
+            'link5':            'Privasi',
+            'link6':            'Peraturan',
+            'link7':            'Cookies'
+        },
+        'connect': {
+            'connectButton':    'Sambung Lumo',
+        },
+        'connectingComponent': {
+            'gifAlt':           'Animasi tunggu',
+            'title':            'Sambung Lumo',
+            'message':          'Sila tunggu. Lumo sedang disambung. Lebih 5 minit? ',
+            'link':             'Minta bantuan',
+            'badge':            'Kami sedang sambung Lumo sekarang.'
+        },
+        'notifications': {
+            'connectA':        'Tiada sambungan. Cuba lagi dalam',
+            'connectB':        'Muat semula selesai',
+            'connectC':        'Menyambung',
+            'preferencesA':    'Bahasa ditukar kepada',
+        }
     }
 };

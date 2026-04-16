@@ -84,8 +84,8 @@ export function generateConnectingComponent() {
 }
 
 export function generateContent() {
-    generateNav();
-    generateFooter();
+    // generateNav();
+    // generateFooter();
     generateButton();
     generateConnectingComponent();
 }

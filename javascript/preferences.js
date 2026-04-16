@@ -1,3 +1,4 @@
+import { content } from "./data/content.js";
 import { isDevModeEnabled } from './helpers.js';
 import { generateContent } from './generateContent.js';
 import { addNotification } from './notification.js';
@@ -8,10 +9,14 @@ export let preferredTheme = '';
 const languageSelector = document.getElementById("languageSelector");
 
 languageSelector.addEventListener("change", (event) => {
-    preferredLanguage = event.target.value;
-    addNotification('information', `Changed language to ${event.target.value}`);
+    preferredLanguage = event.target.value.toLowerCase().trim();
+
+    localStorage.setItem('language', preferredLanguage);
+
+    addNotification('information', `${content[preferredLanguage].notifications.preferencesA} ${preferredLanguage}`);
+    isDevModeEnabled(true, `INFO: Changed language to '${preferredLanguage}'.`);
+
     generateContent();
-    isDevModeEnabled(true, `INFO: Changed language to '${event.target.value}'.`);
 });
 
 // ============================================================================
@@ -20,19 +25,31 @@ languageSelector.addEventListener("change", (event) => {
 // ============================================================================
 // ============================================================================
 export function findPreferredLanguage(lan) {
-    switch (lan.toLowerCase()) {
+    const language = lan?.toLowerCase().trim();
+
+    switch (language) {
         case 'en-gb':
-            preferredLanguage = lan;
-            isDevModeEnabled(true, 'INFO: Found preffered language en-gb');
-            break;
         case 'nl-nl':
-            preferredLanguage = lan;
-            isDevModeEnabled(true, 'INFO: Found preffered language nl-nl');
+        case 'de-de':
+        case 'fr-fr':
+        case 'en-gb-na':
+        case 'nl-nl-na':
+        case 'de-de-na':
+        case 'fr-fr-na':
+            preferredLanguage = language;
+            isDevModeEnabled(true, `INFO: Found preferred language ${language}`);
             break;
+
         default:
             preferredLanguage = 'en-gb';
-            isDevModeEnabled(true, 'WARNING: Could not find preffered language, set to en-gb');
+            isDevModeEnabled(true, 'WARNING: Could not find preferred language, set to en-gb');
             break;
+    }
+
+    localStorage.setItem('language', preferredLanguage);
+
+    if (languageSelector) {
+        languageSelector.value = preferredLanguage;
     }
 }
 
@@ -79,7 +96,7 @@ export function setPreferredTheme() {
             findPreferredTheme((window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
             break;
         default:
-            findPreferredTheme(localStorage.getItem('language'));
+            findPreferredTheme(localStorage.getItem('theme'));
             break;
     }
 }

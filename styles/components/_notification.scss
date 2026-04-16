@@ -26,6 +26,17 @@
       height: 15px;
     }
 
+    // Styling for the succes notification
+    & > div.success {
+        border: 1px solid #345f2a;
+        // background-color: #00bf0055;
+        color: #9ca3af;
+    }
+    // Styling for the default notification
+    & > div.information {
+        border: 1px solid #4b5563;
+        color: #9ca3af;
+    }
     & > button {
       width: 20px;
       height: 20px;
@@ -54,7 +65,7 @@
   }
 
   // Styling for the succes notification
-  & > div.succes {
+  & > div.success {
     border: 1px solid #345f2a;
     // background-color: #00bf0055;
     color: #9ca3af;

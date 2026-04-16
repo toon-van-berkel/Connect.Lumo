@@ -2,6 +2,7 @@
 button {
   background-color: #00bf00;
   display: inline-block;
+  width: -moz-max-content;
   width: max-content;
   margin-top: 20px;
   padding: 8px 16px;
@@ -158,6 +159,7 @@ nav > a img {
   flex-direction: column;
 }
 .notification-container > div {
+  width: -moz-max-content;
   width: max-content;
   padding: 8px 16px;
   display: flex;
@@ -169,6 +171,14 @@ nav > a img {
 .notification-container > div > img {
   width: 15px;
   height: 15px;
+}
+.notification-container > div > div.success {
+  border: 1px solid #345f2a;
+  color: #9ca3af;
+}
+.notification-container > div > div.information {
+  border: 1px solid #4b5563;
+  color: #9ca3af;
 }
 .notification-container > div > button {
   width: 20px;
@@ -190,7 +200,7 @@ nav > a img {
 .notification-container > div > button:hover {
   border: #345f2a 1px solid;
 }
-.notification-container > div.succes {
+.notification-container > div.success {
   border: 1px solid #345f2a;
   color: #9ca3af;
 }
@@ -265,6 +275,7 @@ a {
 
 .badge {
   display: inline-block;
+  width: -moz-max-content;
   width: max-content;
   margin-top: 20px;
   padding: 8px 16px;
@@ -291,6 +302,4 @@ a {
 [data-theme=light] {
   background: white;
   color: black;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

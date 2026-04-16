@@ -31,7 +31,7 @@ function addCloseButton(notification, extraAction = null) {
 
 // Make global add notification function for this aplication
 export function addNotification(type, message, count = null, callback = null) {
-    const validTypes = ['succes', 'information', 'warning', 'countingsucces', 'countingwarning', 'countinginformation'];
+    const validTypes = ['success', 'information', 'warning', 'countingsuccess', 'countingwarning', 'countinginformation'];
 
     if (!validTypes.includes(type.toLowerCase())) {
         const notification = document.createElement('div');
@@ -56,14 +56,14 @@ export function addNotification(type, message, count = null, callback = null) {
         return notification;
     }
 
-    if (type === 'countingSucces' || type === 'countingInformation' || type === 'countingWarning') {
+    if (type === 'countingSuccess' || type === 'countingInformation' || type === 'countingWarning') {
         const notification = document.createElement('div');
         let interval;
 
-        if (type === 'countingSucces') {
-            notification.className = 'succes';
+        if (type === 'countingSuccess') {
+            notification.className = 'success';
             notification.innerHTML = `
-                <img src="./assets/SuccesIcon.png" alt="Notification icon">
+                <img src="./assets/SuccessIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
                 <button type="button">${closeIcon}</button>
             `;

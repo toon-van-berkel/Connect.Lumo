@@ -38,7 +38,7 @@ export function addNotification(type, message, count = null, callback = null) {
         notification.className = 'warning';
 
         notification.innerHTML = `
-            <img src="./assets/WarningIcon.png" alt="Notification icon">
+            <img src="./assets/warningIcon.png" alt="Notification icon">
             <div>
                 <span>Warning</span>
                 <span>This notification was not set properly.</span>
@@ -63,21 +63,21 @@ export function addNotification(type, message, count = null, callback = null) {
         if (type === 'countingSuccess') {
             notification.className = 'success';
             notification.innerHTML = `
-                <img src="./assets/SuccessIcon.png" alt="Notification icon">
+                <img src="./assets/successIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
                 <button type="button">${closeIcon}</button>
             `;
         } else if (type === 'countingInformation') {
             notification.className = 'normal';
             notification.innerHTML = `
-                <img src="./assets/InformationIcon.png" alt="Notification icon">
+                <img src="./assets/informationIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
                 <button type="button">${closeIcon}</button>
             `;
         } else if (type === 'countingWarning') {
             notification.className = 'warning';
             notification.innerHTML = `
-                <img src="./assets/WarningIcon.png" alt="Notification icon">
+                <img src="./assets/warningIcon.png" alt="Notification icon">
                 ${message} <span class="count">${count}</span>
                 <button type="button">${closeIcon}</button>
             `;

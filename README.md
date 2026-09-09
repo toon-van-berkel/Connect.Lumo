@@ -26,3 +26,12 @@ Bekijk hier de hoofdrepository van LUMO: [LUMO repo (Github)](https://github.com
 ## Doel van deze repository
 
 Het doel van LUMO Connect is om een stabiele en functionele technische verbinding te bieden binnen het LUMO-systeem, zodat gebruikers op een duidelijke en betrouwbare manier feedback kunnen ontvangen tijdens het hardlopen.
+
+## 📄 License
+
+Copyright © 2026 LUMO project contributors. All rights reserved.
+
+This project is publicly available for **educational, reference and portfolio purposes only**.  
+Reuse, redistribution or modification requires prior permission from the copyright holders.
+
+See [`LICENSE`](LICENSE) for the full terms.
